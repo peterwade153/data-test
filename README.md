@@ -35,3 +35,8 @@ python app.py
 To access the application, in the browser head over to http://localhost:5000/
 
 Design decision are included in the `design decison` file.
+
+### To test the web app run
+<pre>
+python test_app.py
+</pre>
