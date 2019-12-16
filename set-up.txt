@@ -1,0 +1,58 @@
+Instructions for setting the applications locally using a bare git repository.
+
+Assumptions made since thes applications are built with python 3.6.2.
+- Python 3.6 or higher version is installed.
+
+1. Unzip the bare git repository.
+
+2. Create a vitual environment that will isolate the application environment. This section caters for the popular tools/libraries
+   for creating virtual environments i.e. pyenv and virtualenv.
+
+   Using pyenv to manage environments.
+
+   i. To create virtual environment. Run the command below.
+       pyenv virtualenv 3.6.2 app-env
+
+   ii. Clone the repository
+      git clone data_test_bare/ data_test
+
+   iii. Change directory to where the git repository was cloned i.e. data_test, and run the command below.
+       pyenv local app-env
+
+   iv. Activating the environment.
+        pyenv activate app-env
+
+   Skip to step 3. Or Follow steps below to use virtualenv to create virtual environment.
+
+   - Change directory to where the git repository was unzipped.
+
+   - Create a vitual environment and activate it. This environment can be given a name of choice but here, 
+     we shall use the name app-env. Below is the command for creating a virtual environment. Here virtualenv is the tool/library of choice. 
+
+     python -m virtualenv app-env
+
+     Activating the environment
+     change directory to app-env and run the command below
+
+     source bin/activate
+
+   - Clone the repository. The repository will be cloned into the virtual env.
+     git clone data_test_bare/ app-env/data_test
+
+   - Change directory to data_test with the command below.
+     cd data_test
+
+3. Install requirements
+   - run the command below
+     pip install -r requirements.txt
+
+4. To the run the application that transfers data to the database.
+   - run the command below
+   python seed_data.py
+
+5. To run the web application.
+   - run the command below
+   python app.py  
+
+6. To test the web application.
+  - python test_app.py
