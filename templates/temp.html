@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 2px solid #7de1aa;
+                text-align: center;
+                padding: 5px;
+            }
+            tr:nth-child(even) {
+                background-color: #CAE0D4;
+            }
+            h3 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Temperature data</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Timestamp</th>
+                <th>Temperature</th>
+                <th>Duration</th>
+            </tr>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
