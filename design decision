@@ -1,21 +1,25 @@
 Justification for the design decision.
 
 - SQLite database is used for the data storage.
-SQLite is a relational database management system that is easy to use, since it's a document with no required installations or configurations.
-All that is required to use it, is a simple python library sqlite3(which is used for this application).
-This therefore suits the data storage requirement for applications for the task.
+SQLite is a relational database management system that is easy to use, since it's a document with no 
+required installations or configurations. All that is required to use it, is a simple python library sqlite3 
+(which is used for this application). This therefore suits the data storage requirement for applications for the task.
 
 - Pandas library
-Pandas library for data manipulation and analysis. It has a 2 dimensional data structure called a dataframe. This dataframe has methods
-which allow reading of csv files and transfering of data from a dataframe to a database., which are the requirements for the first task.
+Pandas library for data manipulation and analysis. It has a 2 dimensional data structure called a dataframe. 
+This dataframe has methods which allow reading of csv files to dataframes and transfering of data from dataframes to databases, 
+which are the requirements for the first task.
 There are other helpful methods which were used in the cleaning of the data. These include
- 1. Having conistent precision for the values in the temperature column. i.e all values having the same number of decimal places.
- 2. Removing the suffix on the timestamp, since this is common for all values, removing the suffix makes values appear clearer given the differnce between them is a second.
+ 1. Having conistent precision for the values in the temperature column. 
+    i.e all values having the same number of decimal places.
+ 2. Removing the suffix on the timestamp, since this is common for all values, 
+    removing the suffix makes values appear clearer given the differnce between them is a second.
  3. Having the ID column start from 1, rather than the current value, sinc this is all the data we have.
  4. Removing the prefix of `0 days` from the duration column, this too is common for all values.
 
 - Flask mirco-framework
-Flask is a micro-framework for building web applications. It designed to make getting started quick and easy(as stated here https://github.com/pallets/flask).
+Flask is a micro-framework for building web applications. 
+It designed to make getting started quick and easy(as stated here https://github.com/pallets/flask).
 This framework suits the this a task, as application development and design are quick.
 
 The other factors for selection of some of the tools used, is influenced by the tools that are used at smart steel technologies.
