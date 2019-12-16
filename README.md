@@ -33,3 +33,5 @@ python app.py
 </pre>
 
 To access the application, in the browser head over to http://localhost:5000/
+
+Design decision are included in the `design decison` file.
