@@ -40,9 +40,11 @@ class SQLiteHandler(logging.Handler):
             print("failed to log to database")
             raise e
 
-
 @app.route("/")
 def get_temperature():
+    """
+    Serves temperature data from the database, in a simple html format
+    """
     
     logger = logging.getLogger("logger")
     #sqlite handler
